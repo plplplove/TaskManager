@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Nexa;
+    src: url(../fonts/Nexa-Heavy.ttf)
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.banner-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 25px 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: 0px 8px 7px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 8px 7px -7px rgba(66, 68, 90, 1);
+    box-shadow: 0px 8px 7px -7px rgba(66, 68, 90, 1);
+}
+
+
+.logo {
+    width: 10em;
+    height: auto;
+}
+
+.banner-navbar a {
+    color: #430973;
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0 50px 0 50px;
+    transition: 0.3s;
+}
+
+.banner-navbar a :hover {
+    color: black;
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/banner_background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; 
+}
+
+
+.banner-body{
+    animation-name: animate-in;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+
+.banner-body h1 {
+    margin-bottom: 2%;
+    font-family: Nexa;
+    font-size: 3rem;
+}
+
+.banner-body p {
+    margin-bottom: 5%;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.banner-body {
+    width: 50%;
+    display: grid;
+    padding: 10% 5%;
+}
+
+.banner-body a{
+padding: 10px 10px;
+}
+
+
+.banner-button {
+    all: unset;
+    font-family: "Mona Sans", sans-serif;
+    width: 130px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.banner-button::after,
+.banner-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.banner-button::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #430973;
+    border-radius: 10px;
+}
+
+.banner-button::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.banner-button:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+
+.banner-button:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.banner-button:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+
+.banner-button i {
+    margin-left: 1em;
+}
+
+@keyframes animate-in{
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 5em;
+        height: auto;
+    }
+    .banner-navbar a {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin: 10px 40px 0 30px;
+    }
+    .background-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/banner_background.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.4; 
+        z-index: -1; 
+    }
+    .banner-body {
+        width: 70%;
+        padding: 30% 5%;
+    }
+    .banner-body h1 {
+        margin-bottom: 6%;
+        font-family: Nexa;
+        font-size: 20%;
+        white-space: normal;
+    }
+    
+    .banner-body p {
+        margin-bottom: 10%;
+        font-family: "Mona Sans", sans-serif;
+        font-size: 1.3rem;
+    }
+    .banner-button {
+        width: 130px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .lang-pl .banner-body h1 {
+        margin-bottom: 6%;
+        font-family: Nexa;
+        font-size: 2.3rem;
+        white-space: normal;
+    }
+    .lang-pl .banner-body p {
+        margin-bottom: 10%;
+        font-family: "Mona Sans", sans-serif;
+        font-size: 1.3rem;
+    }
+  }
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 7em;
+        height: auto;
+    }
+    .banner-navbar a {
+        font-size: 1.8em;
+        font-weight: 500;
+        margin: 0 40px 0 30px;
+    }
+    .background-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/banner_background.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.4; 
+        z-index: -1; 
+    }
+    .banner-body {
+        width: 80%;
+        padding: 30% 5%;
+    }
+    .banner-body h1 {
+        margin-bottom: 6%;
+        font-family: Nexa;
+        font-size: 2.7rem;
+        white-space: normal;
+    }
+    .banner-body p {
+        margin-bottom: 10%;
+        font-family: "Mona Sans", sans-serif;
+        font-size: 1.7rem;
+    }
+    .banner-button {
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
+    }
+  }
+
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 8em;
+        height: auto;
+    }
+    .banner-navbar a {
+        font-size: 2em;
+        font-weight: 500;
+        margin: 0 40px 0 30px;
+    }
+    .background-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/banner_background.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.4; 
+        z-index: -1; 
+    }
+    .banner-body {
+        width: 80%;
+        padding: 30% 5%;
+    }
+    .banner-body h1 {
+        margin-bottom: 6%;
+        font-family: Nexa;
+        font-size: 2.8rem;
+        white-space: normal;
+    }
+    .banner-body p {
+        margin-bottom: 10%;
+        font-family: "Mona Sans", sans-serif;
+        font-size: 1.7rem;
+    }
+    .banner-button {
+        width: 180px;
+        height: 40px;
+        font-size: 25px;
+    }
+  }
