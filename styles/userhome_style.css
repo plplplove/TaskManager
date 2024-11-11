@@ -1,0 +1,298 @@
+@font-face {
+  font-family: Nexa;
+  src: url(../fonts/Nexa-Heavy.ttf)
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+aside {
+  color: #fff;
+  width: 20%;
+  min-width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  height: 100vh;
+  background-color: #835fbe;
+  border-top-right-radius: 80px;
+  animation-name: sidebar-animate-in;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+aside img{
+  width: 50%;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+aside a {
+  font-size: 1.2vw;
+  font-family: "Mona Sans", sans-serif;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  padding-left: 30px;
+  text-decoration: none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+aside a:hover {
+  color: #430973;
+  background: #fff;
+  outline: none;
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+aside a i {
+  margin-right: 8px;
+  font-size: 1.6vw;
+  padding-right: 10px;
+}
+
+aside a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 20px 0 0 #fff;
+}
+
+aside a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+aside p {
+  margin: 0;
+  padding: 40px 0;
+}
+
+@keyframes sidebar-animate-in{
+  0%{
+      opacity: 0%;
+      transform: translateX(-10%);
+  }
+  100%{
+      opacity: 100%;
+      transform: translateX(0%);
+  }
+}
+
+aside a.active {
+  color: #430973; /* колір тексту для вибраного елементу */
+  background-color: #fff; /* фон для вибраного елементу */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+
+aside a.active::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 20px 0 0 #fff;
+}
+
+aside a.active::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+.account-info{
+  height: 100vh;
+  padding-top:40px;
+  padding-left: 40px;
+width: 80%;
+}
+
+.account-info h1{
+  font-size: 2.3em;
+  font-family: Nexa;
+}
+
+.account-info h2{
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-size: 1.8em;
+  font-family: "Mona Sans", sans-serif;
+
+}
+
+.basic-info{
+  width: 90%;
+  padding: 20px 20px;
+  background-color: rgba(131, 95, 190, 0.2);
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+.basic-info .header{
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.basic-info p {
+  font-size: 1.2em;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.field-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
+.edit-icon {
+  cursor: pointer;
+  color: #430973;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: #835fbe; 
+}
+
+input[type="text"] {
+  font-size: 1.2em;
+  font-family: "Mona Sans", sans-serif;
+  padding: 5px 10px;
+  border: 1px solid #835fbe;
+  border-radius: 8px;
+  outline: none;
+  width: 200px; 
+  transition: all 0.3s ease; 
+}
+
+input[type="text"]:focus {
+  border-color: #430973; 
+  box-shadow: 0 0 5px rgba(67, 9, 115, 0.5);
+}
+
+button {
+  font-size: 1em;
+  padding: 5px 12px;
+  background-color: #835fbe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #430973;
+}
+
+.password{
+  width: 90%;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.1em;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.password i{
+  margin-left: 20px;
+  cursor: pointer;
+  color: #430973;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.password i:hover{
+  color: #835fbe; 
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  font-family: "Mona Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  font-family: "Mona Sans", sans-serif;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #835fbe;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 10px 25px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
