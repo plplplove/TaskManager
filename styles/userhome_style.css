@@ -25,9 +25,6 @@ aside {
   height: 100vh;
   background-color: #835fbe;
   border-top-right-radius: 80px;
-  animation-name: sidebar-animate-in;
-  animation-duration: 0.6s;
-  animation-timing-function: ease-in-out;
 }
 
 aside img{
@@ -93,20 +90,9 @@ aside p {
   padding: 40px 0;
 }
 
-@keyframes sidebar-animate-in{
-  0%{
-      opacity: 0%;
-      transform: translateX(-10%);
-  }
-  100%{
-      opacity: 100%;
-      transform: translateX(0%);
-  }
-}
-
 aside a.active {
-  color: #430973; /* колір тексту для вибраного елементу */
-  background-color: #fff; /* фон для вибраного елементу */
+  color: #430973; 
+  background-color: #fff; 
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   position: relative;
@@ -138,9 +124,8 @@ aside a.active::before {
 
 .account-info{
   height: 100vh;
-  padding-top:40px;
-  padding-left: 40px;
-width: 80%;
+padding: 40px;
+  width: 80%;
 }
 
 .account-info h1{
@@ -158,7 +143,7 @@ width: 80%;
 }
 
 .basic-info{
-  width: 90%;
+  width: 95%;
   padding: 20px 20px;
   background-color: rgba(131, 95, 190, 0.2);
   margin-bottom: 30px;
@@ -179,18 +164,18 @@ width: 80%;
 .field-container {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 15px; 
 }
-
 
 .edit-icon {
   cursor: pointer;
   color: #430973;
   font-size: 1.2em;
-  transition: color 0.3s ease;
+  transition: 0.3s;
 }
 
 .edit-icon:hover {
+  font-size: 1.3em;
   color: #835fbe; 
 }
 

@@ -3,7 +3,7 @@ session_start();
 include 'connect.php';
 
 if (!isset($_SESSION['email'])) {
-    echo "You are not authorised";
+    echo "You are not authorized.";
     exit();
 }
 
@@ -20,7 +20,7 @@ if ($field == "username" || $field == "email") {
         if ($field == "email") {
             $_SESSION['email'] = $value;
         }
-        echo "Успішно оновлено";
+        echo "Successfully updated";
     } else {
         echo "Eror: " . $conn->error;
     }

@@ -29,7 +29,7 @@
                 <label for="chk" aria-hidden="true">Sign up</label>
                 <input type="text" name="user" placeholder="User name" required="">
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pass" placeholder="Password" required="">
+                <input type="password" name="password" placeholder="Password" required="">
                 <button name="SignUp">Sign up</button>
             </form>
         </div>
@@ -38,7 +38,7 @@
             <form method="post" action="register.php">
                 <label for="chk" aria-hidden="true">Login</label>
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pass" placeholder="Password" required="">
+                <input type="password" name="password" placeholder="Password" required="">
                 <button name="LogIn">Login</button>
             </form>
         </div>

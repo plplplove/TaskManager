@@ -8,24 +8,24 @@ if(isset($_POST['SignUp'])){
     $password=$_POST['password'];
     $password=md5($password);
 
-     $checkEmail="SELECT * From users where email='$email'";
-     $result=$conn->query($checkEmail);
-     if($result->num_rows>0){
-        echo "Email Address Already Exists !";
-     }
-     else{
-        $insertQuery="INSERT INTO users(username,email,password)
-                       VALUES ('$userName','$email', '$password')";
-            if($conn->query($insertQuery)==TRUE){
-                header("location: user home.php");
-            }
-            else{
-                echo "Error:".$conn->error;
-            }
-     }
-   
-
+    $checkEmail="SELECT * FROM users WHERE email='$email'";
+    $result=$conn->query($checkEmail);
+    if($result->num_rows > 0){
+        echo "Email Address Already Exists!";
+    } else {
+        $insertQuery = "INSERT INTO users(username, email, password)
+                        VALUES ('$userName', '$email', '$password')";
+        if($conn->query($insertQuery) === TRUE) {
+            session_start();
+            $_SESSION['email'] = $email; 
+            header("Location: user home.php");
+            exit();
+        } else {
+            echo "Error: " . $conn->error;
+        }
+    }
 }
+
 
 if(isset($_POST['LogIn'])){
    $email=$_POST['email'];

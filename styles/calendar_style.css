@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Nexa;
+    src: url(../fonts/Nexa-Heavy.ttf)
+  }
+  
+  
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  aside {
+    color: #fff;
+    width: 20%;
+    min-width: 200px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 100vh;
+    background-color: #835fbe;
+    border-top-right-radius: 80px;
+  }
+  
+  aside img{
+    width: 50%;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+  
+  aside a {
+    font-size: 1.2vw;
+    font-family: "Mona Sans", sans-serif;
+    color: #fff;
+    display: block;
+    padding: 20px;
+    padding-left: 30px;
+    text-decoration: none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  
+  aside a:hover {
+    color: #430973;
+    background: #fff;
+    outline: none;
+    position: relative;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  aside a i {
+    margin-right: 8px;
+    font-size: 1.6vw;
+    padding-right: 10px;
+  }
+  
+  aside a:hover::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 0 20px 0 0 #fff;
+  }
+  
+  aside a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 38px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -20px 0 0 #fff;
+  }
+  
+  aside p {
+    margin: 0;
+    padding: 40px 0;
+  }
+  
+  
+  aside a.active {
+    color: #430973; 
+    background-color: #fff; 
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+  }
+  
+  aside a.active::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 0 20px 0 0 #fff;
+  }
+  
+  aside a.active::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 38px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -20px 0 0 #fff;
+  }
