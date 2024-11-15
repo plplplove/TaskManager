@@ -10,7 +10,7 @@ if (!isset($_SESSION['email'])) {
 $user_email = $_SESSION['email'];
 $search = isset($_GET['search']) ? '%' . $_GET['search'] . '%' : '%';
 
-$query = "SELECT id, task_text, task_date, is_completed, is_starred FROM tasks WHERE user_email = ? AND task_text LIKE ? ORDER BY task_date DESC";
+$query = "SELECT id, task_text, task_date, is_completed, is_starred FROM tasks WHERE user_email = ? AND task_text LIKE ? ORDER BY task_date ASC";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("ss", $user_email, $search);
 $stmt->execute();
@@ -32,7 +32,6 @@ if ($result->num_rows > 0) {
             <i class='fa-solid fa-pen edit-icon' onclick='openEditModal({$row['id']}, \"{$row['task_text']}\", \"$taskDate\")'></i>
             <i class='fa-solid fa-trash delete-icon' onclick='deleteTask({$row['id']})'></i>
         </li>";
-        
     }
 } else {
     echo "<li>You have not added any tasks yet.</li>";

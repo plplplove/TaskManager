@@ -32,7 +32,10 @@
   </script>
 </head>
 <body>
-  <aside>
+<div class="menu-icon" onclick="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+  <aside id="sidebar">
     <img src="img/logo.png" alt="logo">
     <a href="user home.php">
       <i class="fa-solid fa-user"></i>
@@ -42,7 +45,7 @@
       <i class="fa-solid fa-star"></i>
       Start Tasks
     </a>
-    <a href="#" class="active">
+    <a href="tasks.php" class="active">
       <i class="fa-solid fa-list"></i>
       Tasks
     </a>
@@ -55,7 +58,7 @@
       Language
     </a>
     <a href="banner.php">
-      <i class="fa-solid fa-right-from-bracket"></i>
+    <i class="fa-solid fa-right-from-bracket"></i>
       Log Out
     </a>
   </aside>

@@ -1,3 +1,18 @@
+
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector(".menu-icon i");
+  
+    sidebar.classList.toggle("visible");
+    sidebar.classList.toggle("hidden");
+  
+    if (sidebar.classList.contains("visible")) {
+      menuIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+    }
+  }
+
 function loadTasks() {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "load_tasks.php", true);

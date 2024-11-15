@@ -35,7 +35,10 @@ if ($result->num_rows > 0) {
     <script defer src="scripts/user home_script.js"></script>
 </head>
 <body>
-  <aside>
+<div class="menu-icon" onclick="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+  <aside id="sidebar">
     <img src="img/logo.png" alt="logo">
     <a href="#" class="active">
       <i class="fa-solid fa-user"></i>

@@ -378,3 +378,178 @@
       transform: translateY(0);
   }
 }
+
+#sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.menu-icon {
+  display: none; 
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.menu-icon.active i {
+  content: "\f00d"; 
+}
+
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: block; 
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 30%;
+    transform: translateX(-100%);
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+
+  #sidebar.visible {
+    transform: translateX(0);
+  }
+
+  .account-info{
+    height: 100vh;
+    padding: 40px;
+    margin-left: auto;
+    width: 85%;
+  }
+
+  .todo-list{
+    height: 100vh;
+    padding-left: 40px;
+    margin-left: auto;
+    width: 90%;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; 
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50%;
+    transform: translateX(-100%);
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+
+  #sidebar.visible {
+    transform: translateX(0);
+  }
+
+  aside a {
+    font-size: 3vw;
+  }
+  
+  aside a i{
+    font-size: 3vw;
+  }
+  .todo-list{
+    height: 100vh;
+    padding: 40px;
+    margin-left: auto;
+    width: 85%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .menu-icon {
+    display: block; 
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 90%;
+    transform: translateX(-100%);
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+
+  #sidebar.visible {
+    transform: translateX(0);
+  }
+
+  aside a {
+    font-size: 4vw;
+  }
+  
+  aside a i{
+    font-size: 5vw;
+  }
+
+  .todo-list{
+    height: 100vh;
+    padding-left: 30px;
+    margin-left: auto;
+    width: 85%;
+  }
+
+  .todo-list h2{
+    padding-top: 40px;
+    font-size: 2em;
+  }
+
+  .task-input{
+    display: block;
+  }
+
+  .task-input button {
+    text-align: center;
+    padding: 10px 50px;
+    width: 50%;
+  }
+
+  #task-date {
+    width: 50%;
+    padding: 8px;
+    color: #430973;
+    outline: none;
+  }
+
+  .task-item .task-date {
+    font-size: 0.8em;
+    color: #555;
+    margin-left: 15px; 
+  }
+
+  .task-item i {
+    font-size: 1.1em;
+  }
+
+  .modal-content {
+    height: 100vh;
+    padding-bottom: 20px;
+   }
+   
+   .modal-content h2 {
+     margin-top: 150px;
+     margin-bottom: 150px;
+   }
+   
+   .modal-content button {
+     margin-top: 250px;
+     padding: 10px 25px;
+   }
+
+}

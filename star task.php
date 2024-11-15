@@ -49,13 +49,16 @@ if (!$result) {
   </script>
 </head>
 <body>
-  <aside>
+<div class="menu-icon" onclick="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+  <aside id="sidebar">
     <img src="img/logo.png" alt="logo">
     <a href="user home.php">
       <i class="fa-solid fa-user"></i>
       My Account
     </a>
-    <a href="#"  class="active">
+    <a href="#" class="active">
       <i class="fa-solid fa-star"></i>
       Start Tasks
     </a>

@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<aside>
+<aside id="sidebar">
+<div class="menu-icon" onclick="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</div>
     <img src="img/logo.png" alt="logo">
     <a href="user home.php">
       <i class="fa-solid fa-user"></i>
