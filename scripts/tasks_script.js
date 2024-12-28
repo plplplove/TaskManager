@@ -1,4 +1,3 @@
-
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon i");
@@ -72,13 +71,23 @@ function toggleTask(taskId, isCompleted) {
 }
 
 function searchTasks() {
-            const searchText = document.getElementById('search-task').value.toLowerCase();
-            const tasks = document.querySelectorAll('#tasks-container li');
-            tasks.forEach(task => {
-                const taskText = task.textContent.toLowerCase();
-                task.style.display = taskText.includes(searchText) ? '' : 'none';
-            });
-        }
+    const searchText = document.getElementById('search-task').value.toLowerCase();
+    const tasks = document.querySelectorAll('#tasks-container li');
+    
+    tasks.forEach(task => {
+      // Беремо саме текст завдання:
+      const textElement = task.querySelector('.task-text'); 
+      const textContent = textElement ? textElement.textContent.toLowerCase() : '';
+  
+      // Визначаємо, чи відображати поточний <li>:
+      if (textContent.includes(searchText)) {
+        task.style.display = '';
+      } else {
+        task.style.display = 'none';
+      }
+    });
+  }
+  
 
 function addTask() {
     const taskText = document.getElementById('new-task').value;

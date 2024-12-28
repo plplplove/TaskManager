@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const logoImage = document.querySelector('.logo'); 
+
+    let currentTheme = localStorage.getItem('theme') || 'light';
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            logoImage.src = 'img/logo_white.png'; 
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeToggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            logoImage.src = 'img/logo.png'; 
+        }
+        localStorage.setItem('theme', theme);
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(currentTheme);
+    });
+    applyTheme(currentTheme);
+});
+
 const translations = {
     en: {
         heading: "Build your work’s foundation with tasks",
@@ -35,3 +61,5 @@ document.getElementById('button-language').addEventListener('click', function(ev
 });
 
 setLanguage(currentLanguage);
+
+

@@ -317,3 +317,76 @@ button:hover{
     }
 }
 
+
+body.dark-theme {
+    background-image: url(../img/black_background.gif);
+    color: #fff;
+}
+
+body.dark-theme .log-in-navbar a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+body.dark-theme .log-in-navbar a :hover {
+    color: #eacaff;
+}
+
+body.dark-theme label{
+    color: #fff;
+}
+
+body.dark-theme .main-form{
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #eacaff;
+}
+
+body.dark-theme input{
+    color: #eacaff;
+    border: 2px solid #fff;
+}
+
+body.dark-theme input::placeholder{
+    color: #eacaff;
+}
+
+body.dark-theme button{
+    background: #fff;
+    color: #430973;
+}
+
+body.dark-theme button:hover{
+    background: #eacaff;
+}
+
+body.dark-theme .log-in{
+    background: #fff;
+}
+
+body.dark-theme .log-in label{
+    color: #430973;
+}
+
+body.dark-theme .log-in input{
+    color: #430973;
+    border: 2px solid #430973;
+}
+
+body.dark-theme .log-in input::placeholder{
+    color: #430973;
+}
+
+body.dark-theme .log-in button{
+    background: #430973;
+    color: #fff;
+}
+
+body.dark-theme .log-in button:hover{
+    background: #6921a5;
+}
+
+
+
+

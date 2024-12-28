@@ -18,6 +18,7 @@
         <img src="img/logo.png" alt="logo" class="logo">
         <nav class="log-in-navbar">
             <a href="banner.php"><i class="fa-solid fa-house" id="button-home"></i></a>
+            <a href="#" id="theme-toggle"><i class="fa-solid fa-sun"></i></a>
             <a href="#"><i class="fa-solid fa-globe" id="button-language"></i></a>
         </nav>
     </header>
@@ -30,7 +31,7 @@
                 <input type="text" name="user" placeholder="User name" required="">
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" name="password" placeholder="Password" required="">
-                <button name="SignUp">Sign up</button>
+                <button type="submit" name="SignUp" class="signup-btn">Sign up</button>
             </form>
         </div>
 
@@ -39,7 +40,7 @@
                 <label for="chk" aria-hidden="true">Login</label>
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" name="password" placeholder="Password" required="">
-                <button name="LogIn">Login</button>
+                <button type="submit" name="LogIn" class="login-btn">Login</button>
             </form>
         </div>
 </div>
