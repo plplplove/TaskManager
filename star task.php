@@ -54,7 +54,7 @@ if (!$result) {
 </div>
   <aside id="sidebar">
     <img src="img/logo.png" alt="logo">
-    <a href="user home.php">
+    <a href="user_home.php">
       <i class="fa-solid fa-user"></i>
       My Account
     </a>

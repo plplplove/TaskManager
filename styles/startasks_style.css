@@ -158,6 +158,12 @@
   color: grey;
 }
 
+li{
+  font-family: "Mona Sans", sans-serif;
+  font-size: 1.1em;
+  color: #000000;
+}
+
 #starred-tasks-list {
   list-style: none;
   padding: 0;
