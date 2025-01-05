@@ -1,126 +1,21 @@
+@import url('variables.css');
+
 @font-face {
-    font-family: Nexa;
-    src: url(../fonts/Nexa-Heavy.ttf)
-  }
-  
-  
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-  }
-  
-  aside {
-    color: #fff;
-    width: 20%;
-    min-width: 200px;
-    padding-left: 20px;
-    padding-top: 20px;
-    height: 100vh;
-    background-color: #835fbe;
-    border-top-right-radius: 80px;
-  }
-  
-  aside img{
-    width: 50%;
-    margin-left: 25px;
-    margin-bottom: 30px;
-    padding-top: 30px;
-  }
-  
-  aside a {
-    font-size: 1.2vw;
-    font-family: "Mona Sans", sans-serif;
-    color: #fff;
-    display: block;
-    padding: 20px;
-    padding-left: 30px;
-    text-decoration: none;
-    -webkit-tap-highlight-color:transparent;
-  }
-  
-  aside a:hover {
-    color: #430973;
-    background: #fff;
-    outline: none;
-    position: relative;
-    background-color: #fff;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  
-  aside a i {
-    margin-right: 8px;
-    font-size: 1.6vw;
-    padding-right: 10px;
-  }
-  
-  aside a:hover::after {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: 100%;
-    right: 0;
-    height: 35px;
-    width: 35px;
-    border-bottom-right-radius: 18px;
-    box-shadow: 0 20px 0 0 #fff;
-  }
-  
-  aside a:hover::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    top: 38px;
-    right: 0;
-    height: 35px;
-    width: 35px;
-    border-top-right-radius: 18px;
-    box-shadow: 0 -20px 0 0 #fff;
-  }
-  
-  aside p {
-    margin: 0;
-    padding: 40px 0;
-  }
-  
-  aside a.active {
-    color: #430973; 
-    background-color: #fff; 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    position: relative;
-  }
-  
-  aside a.active::after {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: 100%;
-    right: 0;
-    height: 35px;
-    width: 35px;
-    border-bottom-right-radius: 18px;
-    box-shadow: 0 20px 0 0 #fff;
-  }
-  
-  aside a.active::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    top: 38px;
-    right: 0;
-    height: 35px;
-    width: 35px;
-    border-top-right-radius: 18px;
-    box-shadow: 0 -20px 0 0 #fff;
-  }
+  font-family: Nexa;
+  src: url(../fonts/Nexa-Heavy.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
 
 
 .account-info {
@@ -131,7 +26,7 @@
 .account-info h1 {
   font-size: 2.3em;
   font-family: Nexa;
-  color: #000000;
+  color: var(--text-color);
   margin-bottom: 30px;
 }
 
@@ -158,10 +53,10 @@
   color: grey;
 }
 
-li{
+li {
   font-family: "Mona Sans", sans-serif;
   font-size: 1.1em;
-  color: #000000;
+  color: var(--text-color);
 }
 
 #starred-tasks-list {
@@ -186,11 +81,11 @@ li{
   background-color: rgba(131, 95, 190, 0.2);
 }
 
-.task-item input[type='checkbox'] {
+.task-item input[type="checkbox"] {
   margin-right: 15px;
 }
 
-.task-item input[type='checkbox']:checked {
+.task-item input[type="checkbox"]:checked {
   accent-color: #430973;
 }
 
@@ -200,7 +95,7 @@ li{
 
 .task-item .task-date {
   font-size: 1em;
-  color: #555;
+  color: var(--text-color);
   margin-left: 15px;
 }
 
@@ -211,13 +106,17 @@ li{
   margin-left: 15px;
 }
 
-.task-item .edit-icon, .task-item .delete-icon {
-  color: grey;
+
+.task-item .edit-icon,
+.task-item .delete-icon {
+  color: var(--text-color);
+  transition: font-size 0.3s ease, color 0.3s ease;
 }
 
-.task-item .edit-icon:hover, .task-item .delete-icon:hover {
-  font-size: 1.3em;
-  color: #000;
+.task-item .edit-icon:hover,
+.task-item .delete-icon:hover {
+  font-size: 1.35em;
+  color: var(--icon-hover-bg);
 }
 
 .task-item.completed {
@@ -265,21 +164,23 @@ li{
 
 .modal-content {
   background: rgba(255, 255, 255, 0);
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 400px;
   border-radius: 10px;
 }
 
 .modal-content h2 {
+  color: var(--text-color);
   font-family: "Mona Sans", sans-serif;
   margin-bottom: 20px;
   font-size: 1.5em;
 }
 
 .modal-content label {
+  color: var(--text-color);
   font-family: "Mona Sans", sans-serif;
 }
 
@@ -328,12 +229,12 @@ li{
 
 @keyframes modal-appear {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -342,7 +243,7 @@ li{
 }
 
 .menu-icon {
-  display: none; 
+  display: none;
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
@@ -352,12 +253,12 @@ li{
 }
 
 .menu-icon.active i {
-  content: "\f00d"; 
+  content: "\f00d";
 }
 
 @media (max-width: 1024px) {
   .menu-icon {
-    display: block; 
+    display: block;
   }
 
   #sidebar {
@@ -375,26 +276,24 @@ li{
     transform: translateX(0);
   }
 
-  .account-info{
+  .account-info {
     height: 100vh;
     padding: 40px;
     margin-left: auto;
     width: 85%;
   }
 
-  .account-info{
+  .account-info {
     height: 100vh;
     padding-left: 30px;
     margin-left: auto;
     width: 90%;
   }
-
-
 }
 
 @media (max-width: 768px) {
   .menu-icon {
-    display: block; 
+    display: block;
   }
 
   #sidebar {
@@ -415,22 +314,21 @@ li{
   aside a {
     font-size: 3vw;
   }
-  
-  aside a i{
+
+  aside a i {
     font-size: 3vw;
   }
-  .account-info{
+  .account-info {
     height: 100vh;
     padding: 40px;
     margin-left: auto;
     width: 85%;
   }
-
 }
 
 @media (max-width: 480px) {
   .menu-icon {
-    display: block; 
+    display: block;
   }
 
   #sidebar {
@@ -451,37 +349,35 @@ li{
   aside a {
     font-size: 4vw;
   }
-  
-  aside a i{
+
+  aside a i {
     font-size: 5vw;
   }
 
-  .account-info{
+  .account-info {
     height: 100vh;
     padding-left: 30px;
     margin-left: auto;
     width: 85%;
   }
 
-  .account-info h1{
+  .account-info h1 {
     padding-top: 40px;
     font-size: 2em;
   }
-  
+
   .modal-content {
-   height: 100vh;
-   padding-bottom: 20px;
+    height: 100vh;
+    padding-bottom: 20px;
   }
-  
+
   .modal-content h2 {
     margin-top: 150px;
     margin-bottom: 150px;
   }
-  
+
   .modal-content button {
     margin-top: 250px;
     padding: 10px 25px;
   }
 }
-
-  

@@ -1,9 +1,14 @@
 <?php
-session_start();
 include 'connect.php';
 
-if (!isset($_SESSION['email'])) {
-    echo "You are not authorised";
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo "Method Not Allowed";
+    exit();
+}
+
+if (!isset($_POST['id'])) {
+    echo "Task ID is required.";
     exit();
 }
 
@@ -14,7 +19,7 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute()) {
-    echo "Task deleted successfully";
+    echo "success";
 } else {
     echo "Error deleting task: " . $conn->error;
 }

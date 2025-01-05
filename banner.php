@@ -19,13 +19,13 @@
         <nav class="banner-navbar">
             <a href="#" id="theme-toggle"><i class="fa-solid fa-sun"></i></a>
             <a href="#" id="button-language"><i class="fa-solid fa-globe"></i></a>
-            <a href="log in.php"><i class="fa-solid fa-user" id="button-login"></i></a>
+            <a href="login.php"><i class="fa-solid fa-user" id="button-login"></i></a>
         </nav>
     </header>
     <div class="banner-body">
         <h1 id="main-heading">Build your work’s foundation with tasks</h1>
         <p id="main-paragraph">Plan, organize, and collaborate on any project with tasks that adapt to any workflow or type of work.</p>
-        <a href="log in.php"><button class="banner-button" role="button" id="start-button">Get Started<i class="fa-solid fa-arrow-right"></i></button></a>
+        <a href="login.php"><button class="banner-button" role="button" id="start-button">Get Started<i class="fa-solid fa-arrow-right"></i></button></a>
     </div>
 </body>
 </html>

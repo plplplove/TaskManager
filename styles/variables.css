@@ -1,0 +1,38 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --text-color-toolbar-title:#e4d8f4;
+    --text-days-color: #835fbe;
+    --sidebar-bg: #835fbe;
+    --calendar-bg: #ffffff;
+    --event-bg: #835fbe;
+    --modal-bg: #ffffff;
+    --button-bg: #6e4ea0;
+    --button-hover-bg: #835fbe;
+    --icon-hover-bg: #835fbe;
+    --link-hover-color: #430973;
+    --input-bg: #fff;
+    --google-login-bg: #fff;
+    --google-sign: #6d44b8;
+    --burger: #000;
+  }
+  
+  .dark-theme {
+    --bg-color: #2c1a41;
+    --text-color: #e4d8f4;
+    --text-color-toolbar-title:#e4d8f4;
+    --text-days-color: #e4d8f4;
+    --sidebar-bg: #6e4ea0;
+    --calendar-bg: #382656;
+    --event-bg: #6e4ea0;
+    --modal-bg: #453267;
+    --button-bg: #5b3e85;
+    --icon-hover-bg: #ae7bff;
+    --button-hover-bg: #7d5fb1;
+    --link-hover-color: #fff;
+    --input-bg: #e4d8f4;
+    --google-login-bg: #6d44b8;
+    --google-sign: #fff;
+    --burger: #fff;
+
+  }

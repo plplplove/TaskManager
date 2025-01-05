@@ -1,0 +1,431 @@
+@font-face {
+    font-family: Nexa;
+    src: url(../fonts/Nexa-Heavy.ttf)
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url(../img/banner_background.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.log-in-header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px 25px;
+    animation-name: header-animate-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+.logo {
+    width: 8em;
+    height: auto;
+    padding-top: 10px;
+}
+
+.log-in-navbar a {
+    color: #430973;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 20px 0 40px;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.log-in-navbar a:hover {
+    color: black;
+}
+
+.main-body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+.main-form{
+    width: 400px;
+	height: 550px;
+	overflow: hidden;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #430973;
+    border-radius: 10px;
+    margin-top: -50px;
+    animation-name: animate-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+#chk{
+	display: none;
+}
+
+.sign-up{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+label{
+    color: #430973;
+	font-size: 2.3em;
+    font-family: Nexa;
+	justify-content: center;
+	display: flex;
+	margin: 50px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+	height: 10px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #430973;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #430973;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 12px;
+}
+
+input::placeholder {
+    color: #430973;
+}
+
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	margin-top: 30px;
+	outline: none;
+	border: none;
+    background: #430973;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Mona Sans", sans-serif;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+button:hover{
+	background: #6d44b8;
+}
+
+.log-in{
+	height: 460px;
+	background: #430973;
+	border-radius: 60% / 10%;
+	transform: translateY(-150px);
+	transition: .8s ease-in-out;
+}
+
+.log-in label{
+	color: #fff;
+	transform: scale(.6);
+}
+
+.log-in input{
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.log-in input::placeholder{
+    color: #fff;
+}
+
+.log-in button{
+    background: #fff;
+    color: #430973;
+	transition: .2s ease-in;
+}
+
+.log-in button:hover{
+    background: #e3e3e3;
+}
+
+#chk:checked ~ .log-in{
+	transform: translateY(-400px);
+}
+#chk:checked ~ .log-in label{
+	transform: scale(1);	
+}
+#chk:checked ~ .sign-up label{
+	transform: scale(.6);
+}
+
+.google-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 2px;
+}
+
+.google-login .g_id_signin {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #6d44b8;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.google-login .g_id_signin:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google-login .g_id_signin:active {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.google-login .g_id_signin i {
+    color: var(--google-sign);
+}
+
+@keyframes animate-in{
+    0%{
+        opacity: 0%;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes header-animate-in{
+    0%{
+        opacity: 0%;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-form{
+        width: 100%;
+        height: auto;
+    }
+    label{
+        padding-top: 20%;
+        font-size: 3.3em;
+        margin: 50px;
+    }
+    input{
+        width: 80%;
+        height: 20px;
+        font-size: 25px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    button{
+        width: 80%;
+        height: 70px;
+        margin: 20px auto;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .log-in{
+        height: 460px;
+        background: #430973;
+        border-radius: 60% / 10%;
+        transform: translateY(50px);
+        transition: .8s ease-in-out;
+        padding-bottom: 400px;
+    }
+
+    .log-in label{
+        margin-top: -5px;
+        margin-bottom: 100px;
+    }
+
+    #chk:checked ~ .log-in{
+        transform: translateY(-400px);
+    }
+    #chk:checked ~ .log-in label{
+        transform: scale(1);	
+    }
+    #chk:checked ~ .sign-up label{
+        transform: scale(.6);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-form{
+        width: 500px;
+        height: 650px;
+        margin-top: -20%;
+    }
+    label{
+        font-size: 2.5em;
+    }
+    input{
+        width: 80%;
+        height: 20px;
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    button{
+        width: 80%;
+        height: 70px;
+        margin: 20px auto;
+        margin-top: 30px;
+        font-size: 20px;}
+
+    .log-in{
+            height: 1000px;
+        
+    }        
+    #chk:checked ~ .log-in{
+        transform: translateY(-500px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-form{
+        width: 500px;
+        height: 650px;
+        margin-top: -20%;
+    }
+    label{
+        font-size: 2.5em;
+    }
+    input{
+        width: 80%;
+        height: 20px;
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    button{
+        width: 80%;
+        height: 70px;
+        margin: 20px auto;
+        margin-top: 30px;
+        font-size: 20px;}
+
+    .log-in{
+            height: 1000px;
+        
+    }        
+    #chk:checked ~ .log-in{
+        transform: translateY(-500px);
+    }
+}
+
+
+body.dark-theme {
+    background-image: url(../img/black_background.gif);
+    color: #fff;
+}
+
+body.dark-theme .log-in-navbar a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+body.dark-theme .log-in-navbar a :hover {
+    color: #eacaff;
+}
+
+body.dark-theme label{
+    color: #fff;
+}
+
+body.dark-theme .main-form{
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #eacaff;
+}
+
+body.dark-theme input{
+    color: #eacaff;
+    border: 2px solid #fff;
+}
+
+body.dark-theme input::placeholder{
+    color: #eacaff;
+}
+
+body.dark-theme button{
+    background: #fff;
+    color: #430973;
+}
+
+body.dark-theme button:hover{
+    background: #eacaff;
+}
+
+body.dark-theme .log-in{
+    background: #fff;
+}
+
+body.dark-theme .log-in label{
+    color: #430973;
+}
+
+body.dark-theme .log-in input{
+    color: #430973;
+    border: 2px solid #430973;
+}
+
+body.dark-theme .log-in input::placeholder{
+    color: #430973;
+}
+
+body.dark-theme .log-in button{
+    background: #430973;
+    color: #fff;
+}
+
+body.dark-theme .log-in button:hover{
+    background: #6921a5;
+}
+
+
+
+

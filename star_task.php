@@ -1,9 +1,10 @@
 <?php
 session_start();
 include 'connect.php';
+include_once __DIR__ . '/lang/language_handler.php'; // Підключення для перекладу
 
 if (!isset($_SESSION['email'])) {
-    echo "You are not authorized.";
+    echo $langData['not_authorized']; // Використання перекладу
     exit();
 }
 
@@ -14,9 +15,9 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute()) {
-    echo "Task starred status updated successfully";
+    echo $langData['task_starred_updated']; // Використання перекладу
 } else {
-    echo "Error updating task star status: " . $conn->error;
+    echo $langData['error_updating_starred']; // Використання перекладу
 }
 
 $stmt->close();
