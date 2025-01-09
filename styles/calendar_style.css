@@ -20,10 +20,6 @@ body {
   color: var(--text-color);
 }
 
-#sidebar {
-  background-color: var(--sidebar-bg);
-}
-
 #calendar {
   flex: 1;
   margin: 20px;

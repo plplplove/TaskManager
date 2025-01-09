@@ -224,7 +224,7 @@ button:hover{
 @keyframes animate-in{
     0%{
         opacity: 0%;
-        transform: translateY(10%);
+        transform: translateY(50%);
     }
     100%{
         opacity: 100%;
