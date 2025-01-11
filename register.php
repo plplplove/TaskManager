@@ -2,6 +2,19 @@
 session_start();
 require_once 'config.php';
 require_once 'connect.php';
+require_once 'jwt_utils.php';
+
+// Перевіряємо наявність JWT токену
+if (isset($_COOKIE['jwt'])) {
+    $token = $_COOKIE['jwt'];
+    $payload = JWTUtils::validateToken($token);
+    
+    if ($payload !== false) {
+        // Якщо токен валідний, перенаправляємо на user_home.php
+        header('Location: user_home.php');
+        exit();
+    }
+}
 
 function sanitize($data) {
     global $conn;
@@ -35,6 +48,17 @@ if(isset($_POST['SignUp'])){
         
         if($stmt->execute()) {
             $_SESSION['email'] = $email;
+            
+            // Генеруємо JWT токен
+            $userData = array(
+                'email' => $email,
+                'username' => $userName
+            );
+            $token = JWTUtils::generateToken($userData);
+            
+            // Встановлюємо токен в куки
+            setcookie('jwt', $token, time() + 3600, '/', '', true, true);
+            
             header("Location: user_home.php");
             exit();
         } else {
@@ -63,6 +87,17 @@ if(isset($_POST['LogIn'])){
     if($result->num_rows > 0){
         $user = $result->fetch_assoc();
         $_SESSION['email'] = $user['email'];
+        
+        // Генеруємо JWT токен
+        $userData = array(
+            'email' => $user['email'],
+            'username' => $user['username']
+        );
+        $token = JWTUtils::generateToken($userData);
+        
+        // Встановлюємо токен в куки
+        setcookie('jwt', $token, time() + 3600, '/', '', true, true);
+        
         header("Location: user_home.php");
         exit();
     } else {

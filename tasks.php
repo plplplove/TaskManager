@@ -1,4 +1,5 @@
 <?php
+require_once 'auth_check.php';
 include_once __DIR__ . '/lang/language_handler.php';
 ?>
 

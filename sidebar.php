@@ -1,11 +1,25 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
+<script src="scripts/token_manager.js"></script>
+<script>
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+}
+
+function handleLogout() {
+    deleteCookie('jwt');
+    window.location.href = 'logout.php';
+}
+</script>
+
 <div class="menu-icon" onclick="toggleSidebar()">
   <i class="fa-solid fa-bars"></i>
 </div>
 <aside id="sidebar">
-  <img src="img/logo.png" alt="logo">
+  <a href="banner.php" style="all: unset; cursor: pointer;">
+    <img src="img/logo.png" alt="logo">
+  </a>
 
   <a href="user_home.php" class="<?php echo $currentPage === 'user_home.php' ? 'active' : ''; ?>">
     <i class="fa-solid fa-user"></i>
@@ -27,7 +41,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <?php echo htmlspecialchars($translations['calendar']); ?>
   </a>
 
-  <a href="logout.php" class="<?php echo $currentPage === 'logout.php' ? 'active' : ''; ?>">
+  <a href="javascript:void(0);" onclick="handleLogout()" class="<?php echo $currentPage === 'logout.php' ? 'active' : ''; ?>">
     <i class="fa-solid fa-right-from-bracket"></i>
     <?php echo htmlspecialchars($translations['log_out']); ?>
   </a>

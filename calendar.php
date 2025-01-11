@@ -1,4 +1,5 @@
 <?php
+require_once 'auth_check.php';
 include 'lang/language_handler.php';
 ?>
 

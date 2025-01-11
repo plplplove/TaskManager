@@ -1,5 +1,18 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
+require_once 'jwt_utils.php';
+
+// Перевіряємо наявність JWT токену
+if (isset($_COOKIE['jwt'])) {
+    $token = $_COOKIE['jwt'];
+    $payload = JWTUtils::validateToken($token);
+    
+    if ($payload !== false) {
+        // Якщо токен валідний, перенаправляємо на user_home.php
+        header('Location: user_home.php');
+        exit();
+    }
+}
 
 $client = new Google_Client();
 $client->setClientId('620414729244-hejig77caguugme1t00mjthn5cpuh7h6.apps.googleusercontent.com');
